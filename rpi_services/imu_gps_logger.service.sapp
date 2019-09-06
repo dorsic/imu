@@ -1,0 +1,11 @@
+[Unit]
+Decription=BerryIMU pressure and temperature logging
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=gpspipe -r -d -l -o /home/pi/imu/G`date +"%Y%m%d-%H-%M-%S"`.nmea
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

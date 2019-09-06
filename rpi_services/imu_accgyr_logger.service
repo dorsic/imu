@@ -1,0 +1,11 @@
+[Unit]
+Decription=BerryIMU acceleration, gyroscope logging
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/pi/imu/readIMU.py -f
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

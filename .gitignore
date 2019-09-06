@@ -102,3 +102,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.vscode/launch.json
+rpi_services/.DS_Store
+.DS_Store
